@@ -1,0 +1,1249 @@
+"Phrases"
+{
+	"Advanced Report"
+	{
+		"en"			"Advanced Report"
+		"tr"			"Gelişmiş Rapor"
+	}
+	
+	"Console"
+	{
+		"en"			"Console"
+		"tr"			"Konsol"
+	}
+
+	"Unnamed"
+	{
+		"en"			"Unnamed"
+		"tr"			"İsimsiz"
+	}
+
+	"Unknown Steam ID"
+	{
+		"en"			"Unknown Steam ID"
+		"tr"			"Bilinmeyen Steam ID"
+	}
+
+	"Unknown Reason"
+	{
+		"en"			"Unknown Reason"
+		"tr"			"Bilinmeyen Neden"
+	}
+
+	"Yes"
+	{
+		"en"			"Yes"
+		"tr"			"Evet"
+	}
+
+	"No"
+	{
+		"en"			"No"
+		"tr"			"Hayır"
+	}
+
+	"CheckAdminFlag Error"
+	{
+		"en"			"You are not authorized to use this command."
+		"tr"			"Bu komutu kullanabilmek için yetkiniz yok."
+	}
+
+	"Database Connect Error Log"
+	{
+		"en"			"Advanced Report Database Connection Failed."
+		"tr"			"Gelişmiş Rapor Veritabanı Bağlantısı Başarısız."
+	}
+
+    "Database Connect Error"
+	{
+		"en"			"{darkred}Advanced Report Database Connection Failed."
+		"tr"			"{darkred}Gelişmiş Rapor Veritabanı Bağlantısı Başarısız."
+	}
+
+	"Database Connect Success"
+	{
+		"en"			"Advanced Report Database Connection Successful."
+		"tr"			"Gelişmiş Rapor Veritabanı Bağlantısı Başarılı."
+	}
+
+	"Database Query Error"
+	{
+		"#format" 		"{1:s}{2:s}"
+		"en"			"Advanced Report Query Error >> {1} >> {2}"
+		"tr"			"Gelişmiş Rapor Sorgu Hatası >> {1} >> {2}"
+	}
+
+	"Console Message"
+	{
+		"en"			"This command is not used in the console."
+		"tr"			"Bu komut konsolda kullanılmamaktadır."
+	}
+
+	"Reporting Prohibited"
+	{
+		"en"			"{darkred}You are prohibited from generating reports."
+		"tr"			"{darkred}Rapor oluşturma yasağınız bulunmaktadır."
+	}
+
+	"Report Generation Waiting Time"
+	{
+		"#format" 		"{1:s}"
+		"en"			"{darkred}Time to wait to generate the report: {lightblue}{1}"
+		"tr"			"{darkred}Rapor oluşturmak için beklemeniz gereken süre: {lightblue}{1}"
+	}
+
+	"Report Generation Rules"
+	{
+		"en"			"Unnecessary use of the report will be prohibited.\nDo you agree?"
+		"tr"			"Gereksiz kullanımda rapor kullanımınız yasaklanacaktır.\nKabul ediyor musunuz?"
+	}
+
+	"Not Accepted"
+	{
+		"en"			"{darkred}The process has not been continued because you did not approve the report generation rules."
+		"tr"			"{darkred}Rapor oluşturma kurallarını onaylamadığınız için işleme devam edilmemiştir."		
+	}
+
+	"Report Ban Usage"
+	{
+		"en"			"Usage: sm_reportban <target> [reason]"
+		"tr"			"Kullanım: sm_raporban <hedef> [sebep]"
+	}
+
+	"Target Error"
+	{
+		"en"			"Target not found. Please select a valid target player."
+		"tr"			"Hedef bulunamadı. Lütfen geçerli bir hedef oyuncu seçiniz."
+	}
+
+	"Add Ban Available Error"
+	{
+		"en"			"{darkred}The specified person already has a report creation ban."
+		"tr"			"{darkred}Belirtilen kişinin zaten rapor oluşturma yasağı mevcut."
+	}
+
+	"Add Ban Available Error Console"
+	{
+		"en"			"The specified person already has a report creation ban."
+		"tr"			"Belirtilen kişinin zaten rapor oluşturma yasağı mevcut."
+	}
+
+	"Add Ban Error"
+	{
+		"en"			"{darkred}Failed to create report ban. An unexpected error has occurred."
+		"tr"			"{darkred}Rapor yasaklaması oluşturulamadı. Beklenmedik bir hata oluştu."
+	}
+
+	"Add Ban Error Console"
+	{
+		"en"			"Failed to create report ban. An unexpected error has occurred."
+		"tr"			"Rapor yasaklaması oluşturulamadı. Beklenmedik bir hata oluştu."
+	}
+
+	"Add Ban Successful"
+	{
+		"#format" 		"{1:s}{2:s}{3:d}"
+		"en"			"{green}Report banned for {orchid}[{1}] {lightblue}{2}. {darkblue}BanID: {purple}${3}"
+		"tr"			"{orchid}[{1}] {lightblue}{2} {green}için rapor yasağı oluşturuldu. {darkblue}BanID: {purple}${3}"
+	}
+
+	"Add Ban Successful Console"
+	{
+		"#format" 		"{1:s}{2:s}{3:d}"
+		"en"			"Report banned for [{1}] {2}. BanID: ${3}"
+		"tr"			"[{1}] {2} için rapor yasağı oluşturuldu. BanID: ${3}"
+	}
+
+	"Add Ban Title"
+	{
+		"en"			"Report Ban Created"
+		"tr"			"Rapor Yasağı Oluşturuldu"	
+	}
+
+	"Add Ban Player Field Title"
+	{
+		"en"			"Player"
+		"tr"			"Oyuncu"	
+	}
+
+	"Add Ban Player Field Value"
+	{
+		"#format" 		"{1:s}{2:s}{3:s}"
+		"en"			"[{1} - {2}]({3})"
+		"tr"			"[{1} - {2}]({3})"	
+	}
+
+	"Add Ban Reason Title"
+	{
+		"en"			"Ban Reason"
+		"tr"			"Yasaklama Nedeni"	
+	}
+
+	"Add Ban Reason Field Value"
+	{
+		"#format" 		"{1:s}"
+		"en"			"{1}"
+		"tr"			"{1}"	
+	}
+
+	"Add Ban ID Title"
+	{
+		"en"			"Ban ID"
+		"tr"			"Ban ID"	
+	}
+
+	"Add Ban ID Field Value"
+	{
+		"#format" 		"{1:d}"
+		"en"			"${1}"
+		"tr"			"${1}"	
+	}
+
+	"Add Ban Admin Footer"
+	{
+		"#format" 		"{1:s}{2:s}{3:s}"
+		"en"			"{1} [{2}] • {3}"
+		"tr"			"{1} [{2}] • {3}"	
+	}
+
+	"Add Ban Console Footer"
+	{
+		"#format" 		"{1:s}"
+		"en"			"Console • {1}"
+		"tr"			"Konsol • {1}"	
+	}
+
+	"Report Ban Steam ID Usage"
+	{
+		"en"			"Usage: sm_reportbansteamid \"<steamid>\" [reason]"
+		"tr"			"Kullanım: sm_raporbansteamid \"<steamid>\" [sebep]"
+	}
+
+	"Steam ID Error"
+	{
+		"en"			"Please enter valid STEAM ID. For example: \"STEAM_1:0:520561540\""
+		"tr"			"Lütfen geçerli STEAM ID giriniz. Örneğin: \"STEAM_1:0:520561540\""
+	}
+
+	"Report UnBan Usage"
+	{
+		"en"			"Usage: sm_reportunban <target:$id:steamid>"
+		"tr"			"Kullanım: sm_raporunban <target:$id:steamid>"
+	}
+
+	"Not Banned Error"
+	{
+		"en"			"{darkred}No report ban was found in the records."
+		"tr"			"{darkred}Kayıtlarda rapor yasağı bulunamadı."
+	}
+
+	"Not Banned Error Console"
+	{
+		"en"			"No report ban was found in the records."
+		"tr"			"Kayıtlarda rapor yasağı bulunamadı."
+	}
+
+	"Remove Ban Error"
+	{
+		"en"			"{darkred}Failed to remove report ban. An unexpected error has occurred."
+		"tr"			"{darkred}Rapor yasaklaması kaldırılamadı. Beklenmedik bir hata oluştu."
+	}
+
+	"Remove Ban Error Console"
+	{
+		"en"			"Failed to remove report ban. An unexpected error has occurred."
+		"tr"			"Rapor yasaklaması kaldırılamadı. Beklenmedik bir hata oluştu."
+	}
+
+	"Remove Ban Successful"
+	{
+		"#format" 		"{1:s}{2:s}{3:d}"
+		"en"			"{green}Report ban removed for {orchid}[{1}] {lightblue}{2}. {darkblue}BanID: {purple}${3}"
+		"tr"			"{orchid}[{1}] {lightblue}{2} {green}için rapor yasağı kaldırıldı. {darkblue}BanID: {purple}${3}"
+	}
+
+	"Remove Ban Successful Console"
+	{
+		"#format" 		"{1:s}{2:s}{3:d}"
+		"en"			"Report ban removed for [{1}] {2}. BanID: ${3}"
+		"tr"			"[{1}] {2} için rapor yasağı kaldırıldı. BanID: ${3}"
+	}
+
+	"Remove Ban Query Error"
+	{
+		"en"			"{darkred}Invalid report removal request. Please specify a valid registration."
+		"tr"			"{darkred}Geçersiz rapor kaldırma isteği. Lütfen geçerli bir kayıt belirtiniz."
+	}
+
+	"Remove Ban Query Error Console"
+	{
+		"en"			"Invalid report removal request. Please specify a valid registration."
+		"tr"			"Geçersiz rapor kaldırma isteği. Lütfen geçerli bir kayıt belirtiniz."
+	}
+
+	"Remove Ban Title"
+	{
+		"en"			"Report Ban Removed"
+		"tr"			"Rapor Yasağı Kaldırıldı"	
+	}
+
+	"Remove Ban Player Field Title"
+	{
+		"en"			"Player"
+		"tr"			"Oyuncu"	
+	}
+
+	"Remove Ban Player Field Value"
+	{
+		"#format" 		"{1:s}{2:s}{3:s}"
+		"en"			"[{1} - {2}]({3})"
+		"tr"			"[{1} - {2}]({3})"	
+	}
+
+	"Remove Ban ID Title"
+	{
+		"en"			"Ban ID"
+		"tr"			"Ban ID"	
+	}
+
+	"Remove Ban ID Field Value"
+	{
+		"#format" 		"{1:d}"
+		"en"			"${1}"
+		"tr"			"${1}"	
+	}
+
+	"Remove Ban Admin Footer"
+	{
+		"#format" 		"{1:s}{2:s}{3:s}"
+		"en"			"{1} [{2}] • {3}"
+		"tr"			"{1} [{2}] • {3}"	
+	}
+
+	"Remove Ban Console Footer"
+	{
+		"#format" 		"{1:s}"
+		"en"			"Console • {1}"
+		"tr"			"Konsol • {1}"	
+	}
+
+	"Players Menu Title"
+	{
+		"en"			"Select The Player You Want To Report"
+		"tr"			"Raporlamak İstediğiniz Oyuncuyu Seçiniz"
+	}
+
+	"Players Menu User"
+	{
+		"#format" 		"{1:s}{2:s}"
+		"en"			"{2} • [{1}]"
+		"tr"			"{2} • [{1}]"
+	}
+
+	"No Player"
+	{
+		"en"			"No players found to report."
+		"tr"			"Rapor edilecek herhangi bir oyuncu bulunamadı."
+	}
+
+	"Report Player Select"
+	{
+		"#format" 		"{1:N}"
+		"en"			"{lightblue}Player selected to report: {orchid}{1}"
+		"tr"			"{lightblue}Rapor edilmek için seçilen oyuncu: {orchid}{1}"
+	}
+
+	"Reason Menu Title"
+	{
+		"en"			"Select the Reporting Reason"
+		"tr"			"Raporlama Sebebini Seçiniz"
+	}
+
+	"Other"
+	{
+		"en"			"Other"
+		"tr"			"Diğer"
+	}
+
+	"Same Player Report Creation Waiting Time"
+	{
+		"#format" 		"{1:s}"
+		"en"			"{darkred}This player has found the record you have created before. Time to wait to generate a report for the same person: {lightblue}{1}"
+		"tr"			"{darkred}Bu oyuncu daha önceden oluşturmuş olduğunuz kayıt bulundu. Aynı kişi için rapor oluşturmak için beklemeniz gereken süre: {lightblue}{1}"
+	}
+
+	"New Report Reason Say"
+	{
+		"en"			"{lightblue}Please enter the reason for the report. Type {darkblue}X {lightblue} to cancel. If no response is received within {orchid}60 {lightblue}seconds, the transaction will be cancelled."
+		"tr"			"{lightblue}Lütfen rapor sebebini giriniz. İptal etmek için {darkblue}X {lightblue}yazınız. {orchid}60 {lightblue}saniye içinde yanıt gelmez ise işlem iptal olacaktır."
+	}
+
+	"Create Report Error"
+	{
+		"en"			"{darkred}The report could not be created. An unexpected error has occurred."
+		"tr"			"{darkred}Rapor oluşturulamadı. Beklenmedik bir hata oluştu."
+	}
+
+	"Create Report Error 2"
+	{
+		"en"			"{darkred}The report was created but the reason for the report could not be sent. An unexpected error has occurred."
+		"tr"			"{darkred}Rapor oluşturuldu fakat rapor nedeni gönderilemedi. Beklenmedik bir hata oluştu."
+	}
+
+	"Create Report Successful"
+	{
+		"#format" 		"{1:s}{2:s}{3:d}"
+		"en"			"{green}Report generated for {orchid}[{1}] {lightblue}{2}. {darkblue}ReportID: {purple}${3}"
+		"tr"			"{orchid}[{1}] {lightblue}{2} {green}için rapor oluşturuldu. {darkblue}RaporID: {purple}${3}"
+	}
+
+	"No Admin on Server"
+	{
+		"en"			"Not Authorized for Report on Server"
+		"tr"			"Sunucuda Rapor İçin Yetkili Bulunmuyor"
+	}
+
+	"Create Report Admin Hud Text"
+	{
+		"#format" 		"{1:d}"
+		"en"			"A New Report Has Been Submitted\nReportID: ${1}"
+		"tr"			"Yeni Bir Rapor İletildi\nRapor ID: ${1}"
+	}
+
+	"Create Report Admin Say Text"
+	{
+		"#format" 		"{1:d}"
+		"en"			"{lightblue}A new report has been submitted. Please review the report.{darkblue}ReportID: {orchid}${1}"
+		"tr"			"{lightblue}Yeni bir rapor iletildi. Lütfen raporu inceleyiniz.{darkblue}Rapor ID: {orchid}${1}"
+	}
+
+	"Create Report Title"
+	{
+		"en"			"New Report Created"
+		"tr"			"Yeni Rapor Oluşturuldu"	
+	}
+
+	"Create Report ID Title"
+	{
+		"en"			"ReportID"
+		"tr"			"RaporID"	
+	}
+
+	"Create Report ID Value"
+	{
+		"#format" 		"{1:d}"
+		"en"			"${1}"
+		"tr"			"${1}"
+	}
+
+	"Create Report Player Field Title"
+	{
+		"en"			"Reported Player"
+		"tr"			"Rapor Edilen Oyuncu"	
+	}
+
+	"Create Report Player Field Value"
+	{
+		"#format" 		"{1:s}{2:s}{3:s}"
+		"en"			"[{1} - {2}]({3})"
+		"tr"			"[{1} - {2}]({3})"	
+	}
+
+	"Create Report Reason Title"
+	{
+		"en"			"Report Reason"
+		"tr"			"Rapor Nedeni"
+	}
+
+	"Create Report Reason Field Value"
+	{
+		"#format" 		"{1:s}"
+		"en"			"{1}"
+		"tr"			"{1}"
+	}
+
+	"Create Report Admin Title"
+	{
+		"en"			"Active Reporting Admins"
+		"tr"			"Aktif Rapor Yetkilileri"
+	}
+
+	"Create Report Footer"
+	{
+		"#format" 		"{1:s}{2:s}{3:s}"
+		"en"			"{1} [{2}] • {3}"
+		"tr"			"{1} [{2}] • {3}"	
+	}
+
+	"Reports Menu Title"
+	{
+		"en"			"Reports"
+		"tr"			"Raporlar"	
+	}
+
+	"All Reports"
+	{
+		"#format" 		"{1:d}"
+		"en"			"All Reports [{1}]"
+		"tr"			"Tüm Raporlar [{1}]"	
+	}
+
+	"Open Reports"
+	{
+		"#format" 		"{1:d}"
+		"en"			"Open Reports [{1}]"
+		"tr"			"Açık Raporlar [{1}]"	
+	}
+
+	"Awaiting Response Reports"
+	{
+		"#format" 		"{1:d}"
+		"en"			"Awaiting Response Reports [{1}]"
+		"tr"			"Yanıt Bekleyen Raporlar [{1}]"	
+	}
+
+	"Closed Reports"
+	{
+		"#format" 		"{1:d}"
+		"en"			"Closed Reports [{1}]"
+		"tr"			"Kapalı Raporlar [{1}]"	
+	}
+
+	"Report List Error"
+	{
+		"en"			"{darkred}An error occurred while listing reports."
+		"tr"			"{darkred}Raporlar listelenirken beklenmedik bir hata oluştu."	
+	}
+
+	"Status 0"
+	{
+		"en"			"Closed"
+		"tr"			"Kapalı"	
+	}
+
+	"Status 1"
+	{
+		"en"			"Open"
+		"tr"			"Açık"	
+	}
+
+	"Status 2"
+	{
+		"en"			"Awaiting Response"
+		"tr"			"Yanıt Bekliyor"	
+	}
+
+	"No Data"
+	{
+		"en"			"No Records Found."
+		"tr"			"Kayıt Bulunamadı."	
+	}
+
+	"Report List Item"
+	{
+		"#format" 		"{1:d}{2:s}{3:s}"
+		"en"			"Report ${1} • {2} • {3}"
+		"tr"			"Rapor ${1} • {2} • {3}"	
+	}
+
+	"Report Detail Menu Title"
+	{
+		"#format" 		"{1:d}"
+		"en"			"Report • ${1}"
+		"tr"			"Rapor • ${1}"	
+	}
+
+	"Report Detail Error"
+	{
+		"en"			"{darkred}An unexpected error occurred while listing report details."
+		"tr"			"{darkred}Rapor detayları listelenirken beklenmedik bir hata oluştu."	
+	}
+	
+	"The Report Is Not Yours"
+	{
+		"en"			"Only authorities can question a report that does not belong to them."
+		"tr"			"Sadece yetkililer kendine ait olmayan bir raporu sorgulayabilir."	
+	}
+
+	"Report Creator"
+	{
+		"#format" 		"{1:s}{2:s}"
+		"en"			"Report Creator: {1} • {2}"
+		"tr"			"Raporu Oluşturan: {1} • {2}"	
+	}
+
+	"Reported Player"
+	{
+		"#format" 		"{1:s}{2:s}"
+		"en"			"Reported Player: {1} • {2}"
+		"tr"			"Raporlanan Oyuncu: {1} • {2}"	
+	}
+
+	"Creation Time"
+	{
+		"#format" 		"{1:s}"
+		"en"			"Creation Time: {1}"
+		"tr"			"Oluşturma Zamanı: {1}"	
+	}
+
+	"Update Time"
+	{
+		"#format" 		"{1:s}"
+		"en"			"Update Time: {1}"
+		"tr"			"Güncelleme Zamanı: {1}"	
+	}
+
+	"Report Detail Reason"
+	{
+		"#format" 		"{1:s}"
+		"en"			"Reason: {1}"
+		"tr"			"Sebep: {1}"	
+	}
+
+	"Messages"
+	{
+		"en"			"Messages"
+		"tr"			"Mesajlar"	
+	}
+
+	"Send Message"
+	{
+		"en"			"Send Message"
+		"tr"			"Mesaj Gönder"	
+	}
+
+	"Transaction Records"
+	{
+		"en"			"Transaction Records"
+		"tr"			"İşlem Kayıtları"	
+	}
+
+	"Report Status Change"
+	{
+		"en"			"Report Status Change"
+		"tr"			"Rapor Durumunu Değiştir"	
+	}
+
+	"Report Status"
+	{
+		"en"			"Report Status"
+		"tr"			"Rapor Durumunu"	
+	}
+
+	"Messages Menu Title"
+	{
+		"#format" 		"{1:d}"
+		"en"			"Report Messages • ${1}"
+		"tr"			"Rapor Mesajları • ${1}"	
+	}
+
+	"Back to Report"
+	{
+		"#format" 		"{1:d}"
+		"en"			"Back to Report • ${1}"
+		"tr"			"Rapora Geri Dön • ${1}"	
+	}
+
+	"Report Messages Error"
+	{
+		"en"			"{darkred}An unexpected error occurred while listing report messages."
+		"tr"			"{darkred}Rapor mesajları listelenirken beklenmedik bir hata oluştu."	
+	}
+
+	"Messages List Item"
+	{
+		"#format" 		"{1:s}{2:s}{3:s}{4:s}"
+		"en"			"[{1}] • {2} • {3}: {4}"
+		"tr"			"[{1}] • {2} • {3}: {4}"	
+	}
+
+	"Report Detail Ban"
+	{
+		"en"			"Apply Report Ban"
+		"tr"			"Rapor Yasağı Uygula"
+	}
+
+	"Report Detail UnBan"
+	{
+		"en"			"Remove Report Ban"
+		"tr"			"Rapor Yasağı Kaldır"
+	}
+
+	"Report Message Say"
+	{
+		"en"			"{lightblue}Please enter your message. Type {darkblue}X {lightblue} to cancel. If no response is received within {orchid}60 {lightblue}seconds, the transaction will be cancelled."
+		"tr"			"{lightblue}Lütfen mesajınızı giriniz. İptal etmek için {darkblue}X {lightblue}yazınız. {orchid}60 {lightblue}saniye içinde yanıt gelmez ise işlem iptal olacaktır."
+	}
+
+	"Send Message Error"
+	{
+		"en"			"{darkred}An unexpected error occurred while sending the report message."
+		"tr"			"{darkred}Rapor mesajı gönderilirken beklenmedik bir hata oluştu."	
+	}
+
+	"Send Message Error 2"
+	{
+		"en"			"{darkred}No report found to send report message."
+		"tr"			"{darkred}Rapor mesajı gönderilecek rapor bulunamadı."	
+	}
+
+	"Send Message Closed Error"
+	{
+		"en"			"{darkred}You cannot send a message to a closed report."
+		"tr"			"{darkred}Kapalı bir rapora mesaj gönderemezsiniz."	
+	}
+
+	"Send Message Flag Error"
+	{
+		"en"			"{darkred}You cannot send a message to a report that does not belong to you. You don't have permission for this."
+		"tr"			"{darkred}Size ait olmayan bir rapora mesaj gönderemezsiniz. Bunun için izniniz yok."	
+	}
+
+	"Send Message Successful"
+	{
+		"#format" 		"{1:d}"
+		"en"			"{green}Your message has been sent for the report. {darkblue}ReportID: {purple}${1}"
+		"tr"			"{green}Rapor için mesajınız gönderildi. {darkblue}RaporID: {purple}${1}"
+	}
+
+	"Send Message Player Hud"
+	{
+		"#format" 		"{1:d}"
+		"en"			"A Message Has Been Received For Your Report\nReportID: ${1}"
+		"tr"			"Bir Raporunuza Mesaj Geldi\nRapor ID: ${1}"
+	}
+
+	"Send Message Player Say Text"
+	{
+		"#format" 		"{1:d}"
+		"en"			"{lightblue}A message has been sent to your report. Please review the report.{darkblue}ReportID: {orchid}${1}"
+		"tr"			"{lightblue}Bir raporunuza mesaj geldi. Lütfen raporu inceleyiniz.{darkblue}Rapor ID: {orchid}${1}"
+	}
+
+	"Send Message Admin Hud"
+	{
+		"#format" 		"{1:d}"
+		"en"			"Message Received a Report\nReportID: ${1}"
+		"tr"			"Bir Rapora Mesaj Geldi\nRapor ID: ${1}"
+	}
+
+	"Send Message Admin Say Text"
+	{
+		"#format" 		"{1:d}"
+		"en"			"{lightblue}Message received for a report. Please review the report.{darkblue}ReportID: {orchid}${1}"
+		"tr"			"{lightblue}Bir rapora mesaj geldi. Lütfen raporu inceleyiniz.{darkblue}Rapor ID: {orchid}${1}"
+	}
+
+	"Send Message Title"
+	{
+		"en"			"Report A New Message Has Been Sent"
+		"tr"			"Rapora Yeni Bir Mesaj Gönderildi"	
+	}
+
+	"Send Message Report ID Title"
+	{
+		"en"			"ReportID"
+		"tr"			"RaporID"	
+	}
+
+	"Send Message Report ID Value"
+	{
+		"#format" 		"{1:d}"
+		"en"			"${1}"
+		"tr"			"${1}"
+	}
+
+	"Send Message - Message Title"
+	{
+		"en"			"Message"
+		"tr"			"Mesaj"	
+	}
+
+	"Send Message - Message Field Value"
+	{
+		"#format" 		"{1:s}"
+		"en"			"{1}"
+		"tr"			"{1}"
+	}
+
+	"Send Message Status Title"
+	{
+		"en"			"Status"
+		"tr"			"Durum"	
+	}
+
+	"Send Message Admin Title"
+	{
+		"en"			"Active Reporting Admins"
+		"tr"			"Aktif Rapor Yetkilileri"
+	}
+
+	"Send Message Footer"
+	{
+		"#format" 		"{1:s}{2:s}{3:s}"
+		"en"			"{1} [{2}] • {3}"
+		"tr"			"{1} [{2}] • {3}"	
+	}
+	
+	"Transaction Records Menu Title"
+	{
+		"#format" 		"{1:d}"
+		"en"			"Transaction Records • ${1}"
+		"tr"			"İşlem Kayıtları • ${1}"	
+	}
+
+	"Report Transaction Records Error"
+	{
+		"en"			"{darkred}An unexpected error occurred while listing report transaction records."
+		"tr"			"{darkred}Rapor işlem kayıtları listelenirken beklenmedik bir hata oluştu."	
+	}
+
+	"Transaction Records List Item"
+	{
+		"#format" 		"{1:s}{2:s}{3:s}{4:s}"
+		"en"			"[{1}] • {2} • {3}: {4}"
+		"tr"			"[{1}] • {2} • {3}: {4}"	
+	}
+
+	"Event 0"
+	{
+		"en"			"The report has been created."
+		"tr"			"Rapor oluşturuldu."
+	}
+
+	"Event 1"
+	{
+		"en"			"Report status is set to open."
+		"tr"			"Rapor durumu açık olarak ayarlandı."
+	}
+
+	"Event 2"
+	{
+		"en"			"Report status is set to awaiting response."
+		"tr"			"Rapor durumu yanıt bekleniyor olarak ayarlandı."
+	}
+
+	"Event 3"
+	{
+		"en"			"Report status is set to close."
+		"tr"			"Rapor durumu kapalı olarak ayarlandı."
+	}
+
+	"Event 4"
+	{
+		"en"			"New message sent."
+		"tr"			"Yeni mesaj gönderildi."
+	}
+
+	"Report Delete"
+	{
+		"en"			"Report Delete"
+		"tr"			"Raporu Sil"
+	}
+
+	"Report Status Change Menu Title"
+	{
+		"#format" 		"{1:d}"
+		"en"			"Report Status Change • ${1}"
+		"tr"			"Rapor Durumunu Değiştir • ${1}"	
+	}
+
+	"Report Status Change Record Error"
+	{
+		"en"			"{darkred}An unexpected error occurred while retrieving report status information."
+		"tr"			"{darkred}Rapor durum bilgileri çekilirken beklenmedik bir hata oluştu."	
+	}
+
+	"Report Status Change Number Error"
+	{
+		"en"			"{darkred}The report status could not be changed. Status information is incorrect."
+		"tr"			"{darkred}Rapor durumu değiştirilemedi. Durum bilgisi hatalı."	
+	}
+
+	"Report Status Change Error"
+	{
+		"en"			"{darkred}An unexpected error occurred while updating report status information."
+		"tr"			"{darkred}Rapor durum bilgileri güncellenirken beklenmedik bir hata oluştu."	
+	}
+
+	"Report Status Update Title"
+	{
+		"en"			"Report Status Updated"
+		"tr"			"Rapor Durumu Güncellendi"	
+	}
+
+	"Status Update Report ID Title"
+	{
+		"en"			"ReportID"
+		"tr"			"RaporID"	
+	}
+
+	"Status Update Report ID Value"
+	{
+		"#format" 		"{1:d}"
+		"en"			"${1}"
+		"tr"			"${1}"
+	}
+	
+	"Status Update - Status Title"
+	{
+		"en"			"Status"
+		"tr"			"Durum"	
+	}
+
+	"Status Update Footer"
+	{
+		"#format" 		"{1:s}{2:s}{3:s}"
+		"en"			"{1} [{2}] • {3}"
+		"tr"			"{1} [{2}] • {3}"	
+	}
+
+	"Report Ban Say"
+	{
+		"en"			"{lightblue}Please enter the report ban reason. Type {darkblue}X {lightblue} to cancel. If no response is received within {orchid}60 {lightblue}seconds, the transaction will be cancelled."
+		"tr"			"{lightblue}Lütfen rapor ban sebebibi giriniz. İptal etmek için {darkblue}X {lightblue}yazınız. {orchid}60 {lightblue}saniye içinde yanıt gelmez ise işlem iptal olacaktır."
+	}
+
+	"Report Detail Ban Error"
+	{
+		"en"			"{darkred}An unexpected error occurred in the player registrations that will be banned from the report information."
+		"tr"			"{darkred}Rapor bilgilerden yasaklanacak oyuncu kayıtlarında beklenmedik bir hata oluştu."	
+	}
+
+	"Report Detail UnBan Error"
+	{
+		"en"			"{darkred}An unexpected error occurred in player registrations that will be banned from report information."
+		"tr"			"{darkred}Rapor bilgilerden yasağı açılacak oyuncu kayıtlarında beklenmedik bir hata oluştu."	
+	}
+
+	"Report Delete Found Error"
+	{
+		"en"			"{darkred}No report found to delete."
+		"tr"			"{darkred}Silinecek rapor bulunamadı."	
+	}
+
+	"Report Delete Error"
+	{
+		"en"			"{darkred}An unexpected error occurred while deleting the report."
+		"tr"			"{darkred}Rapor silinirken beklenmedik bir hata oluştu."	
+	}
+
+	"Delete Report Successful"
+	{
+		"#format" 		"{1:d}"
+		"en"			"{green}The report was successfully deleted.. {darkblue}BanID: {purple}${1}"
+		"tr"			"{green}Rapor başarıyla silindi. {darkblue}BanID: {purple}${1}"
+	}
+
+	"Delete Report Title"
+	{
+		"en"			"A Report Was Deleted"
+		"tr"			"Bir Rapor Silindi"	
+	}
+
+	"Delete Report ID Title"
+	{
+		"en"			"ReportID"
+		"tr"			"RaporID"	
+	}
+
+	"Delete Report ID Value"
+	{
+		"#format" 		"{1:d}"
+		"en"			"${1}"
+		"tr"			"${1}"
+	}
+
+	"Report Status Change Successful"
+	{
+		"#format" 		"{1:d}"
+		"en"			"{green}Report status changed successfully. {darkblue}BanID: {purple}${1}"
+		"tr"			"{green}Rapor durumu başarıyla değiştirildi. {darkblue}BanID: {purple}${1}"
+	}
+
+	"Client Reports Menu Title"
+	{
+		"#format" 		"{1:s}"
+		"en"			"Player Reports • {1}"
+		"tr"			"Oyuncu Raporları • {1}"
+	}
+	
+	"Submitted Reports"
+	{
+		"#format" 		"{1:d}"
+		"en"			"Submitted Reports • {1}"
+		"tr"			"Gönderilen Raporlar • {1}"
+	}
+
+	"Reports Received"
+	{
+		"#format" 		"{1:d}"
+		"en"			"Reports Received • {1}"
+		"tr"			"Alınan Raporlar • {1}"
+	}
+
+	"Report STEAM ID Error"
+	{
+		"en"			"Please enter a valid STEAM ID. Usage: sm_reports [steamid:target]"
+		"tr"			"Lütfen geçerli bir STEAM ID giriniz. Kullanım: sm_raporlar [steamid:hedef]"	
+	}
+
+	"Report Bans Title"
+	{
+		"en"			"Report Bans"
+		"tr"			"Rapor Yasakları"	
+	}
+
+	"Report Ban List Error"
+	{
+		"en"			"{darkred}An unexpected error occurred while listing report bans."
+		"tr"			"{darkred}Rapor yasakları listelenirken beklenmedik bir hata oluştu."	
+	}
+
+	"Report Bans Item"
+	{
+		"#format" 		"{1:d}{2:s}{3:s}{4:s}"
+		"en"			"${1} • [{2}] {3} • {4}"
+		"tr"			"${1} • [{2}] {3} • {4}"	
+	}
+
+	"Detail Ban Error Console"
+	{
+		"en"			"An unexpected error occurred while querying the report ban detail."
+		"tr"			"Rapor yasağı detayı sorgulanırken beklenmedik bir hata oluştu."	
+	}
+
+	"Detail Ban Error"
+	{
+		"en"			"{darkred}An unexpected error occurred while querying the report ban detail."
+		"tr"			"{darkred}Rapor yasağı detayı sorgulanırken beklenmedik bir hata oluştu."	
+	}
+
+	"Detail Ban Not Found Console"
+	{
+		"#format" 		"{1:s}"
+		"en"			"The specified person's report ban was not found. STEAM ID: {1}"
+		"tr"			"Belirtilen kişinin rapor yasağı bulunamadı. STEAM ID: {1}"	
+	}
+
+	"Detail Ban Not Found"
+	{
+		"#format" 		"{1:s}"
+		"en"			"{darkred}The specified person's report ban was not found. {darkblue}STEAM ID: {orchid}{1}"
+		"tr"			"{darkred}Belirtilen kişinin rapor yasağı bulunamadı. {darkblue}STEAM ID: {orchid}{1}"	
+	}
+
+	"Ban Detail Console"
+	{
+		"#format" 		"{1:d},{2:s},{3:s},{4:s},{5:s},{6:s},{7:s}"
+		"en"			"BAN: ${1} {7} • Player: [{2}] {3} • Admin: [{4}] {5} • Reason: {6}"
+		"tr"			"YASAK: ${1} {7} • Oyuncu: [{2}] {3} • Yetkili: [{4}] {5} • Sebep: {6}"	
+	}
+
+	"Ban Detail Menu Title"
+	{
+		"#format" 		"{1:d}"
+		"en"			"Rapor Ban Detail • ${1}"
+		"tr"			"Rapor Yasağı Detay • ${1}"		
+	}
+
+	"Banned Player"
+	{
+		"#format" 		"{1:s}{2:s}"
+		"en"			"Banned Player: {1} • {2}"
+		"tr"			"Yasaklanan Oyuncu: {1} • {2}"	
+	}
+
+	"Banned by Admin"
+	{
+		"#format" 		"{1:s}{2:s}"
+		"en"			"Banned by Admin: {1} • {2}"
+		"tr"			"Yasaklayan Admin: {1} • {2}"	
+	}
+
+	"Ban Time"
+	{
+		"#format" 		"{1:s}"
+		"en"			"Ban Time: {1}"
+		"tr"			"Yasaklama Zamanı: {1}"	
+	}
+
+	"Ban Reason"
+	{
+		"#format" 		"{1:s}"
+		"en"			"Reason: {1}"
+		"tr"			"Sebep: {1}"	
+	}
+
+	"Ban Detail UnBan"
+	{
+		"en"			"Remove Report Ban"
+		"tr"			"Rapor Yasağı Kaldır"
+	}
+
+	"Report Ban Query Usage"
+	{
+		"en"			"Usage: sm_reportbanquery <target:steamid:$id>"
+		"tr"			"Kullanım: sm_raporbansorgu <hedef:steamid:$id>"
+	}
+
+	"Report Ban Not Found"
+	{
+		"en"			"Could not find STEAM ID to query report ban."
+		"tr"			"Rapor yasağı sorgulamak için STEAM ID bulunamadı."
+	}
+
+	"Report Query Usage"
+	{
+		"en"			"Usage: sm_reportquery <$id>"
+		"tr"			"Kullanım: sm_raporsorgu <$id>"
+	}
+
+	"Closed Auto Report Error"
+	{
+		"en"			"Reports that should be closed automatically due to an unexpected error."
+		"tr"			"Otomatik olarak kapatılması gereken raporlar beklenmedik bir hata nedeniyle kapatılamadı."	
+	}
+
+	"Closed Auto Report Not Found"
+	{
+		"en"			"No reports found to close."
+		"tr"			"Kapatılacak herhangi bir rapor bulunamadı."	
+	}
+
+	"Timed Out"
+	{
+		"en"			"Timed Out"
+		"tr"			"Zaman Aşımı"	
+	}
+
+	"Closed Auto Report Info"
+	{
+		"#format" 		"{1:d}{2:d}{3:d}{4:s}"
+		"en"			"Out of a total of {1} reports that received the last update before {4} time, {2} successful, {3} unsuccessful automatic shutdown occurred."
+		"tr"			"{4} zamanından önce son güncelleme almış toplam {1} rapordan {2} başarılı, {3} başarısız otomatik kapatma işlemi gerçekleşti."
+	}
+
+	"Auto Close Report Title"
+	{
+		"#format" 		"{1:s}"
+		"en"			"Reports that received the last update before {1} time have been closed."
+		"tr"			"{1} zamanından önce son güncelleme almış raporlar kapatıldı."	
+	}
+
+	"Total Closed Title"
+	{
+		"en"			"Total"
+		"tr"			"Toplam"
+	}
+
+	"Total Closed Value"
+	{
+		"#format" 		"{1:d}"
+		"en"			"{1}"
+		"tr"			"{1}"
+	}
+
+	"Success Closed Title"
+	{
+		"en"			"Successful"
+		"tr"			"Başarılı"
+	}
+
+	"Success Closed Value"
+	{
+		"#format" 		"{1:d}"
+		"en"			"{1}"
+		"tr"			"{1}"
+	}
+
+	"Fail Closed Title"
+	{
+		"en"			"Başarısız"
+		"tr"			"Başarılı"
+	}
+
+	"Fail Closed Value"
+	{
+		"#format" 		"{1:d}"
+		"en"			"{1}"
+		"tr"			"{1}"
+	}
+
+	"Auto Close Footer"
+	{
+		"#format" 		"{1:s}"
+		"en"			"Timeout Action • {1}"
+		"tr"			"Zaman Aşımı İşlemi • {1}"	
+	}
+
+	"All Delete Report"
+	{
+		"en"			"All Delete Report"
+		"tr"			"Tüm Raporları Sil"
+	}
+
+	"All Delete Bans"
+	{
+		"en"			"All Delete Report Bans"
+		"tr"			"Tüm Rapor Yasaklarını Sil"
+	}
+
+	"All Delete"
+	{
+		"en"			"All Delete"
+		"tr"			"Tümünü Sil"
+	}
+
+	"All Delete Report 2"
+	{
+		"en"			"All reports have been deleted."
+		"tr"			"Tüm raporlar silindi."
+	}
+
+	"All Delete Bans 2"
+	{
+		"en"			"All report bans have been cleared."
+		"tr"			"Tüm rapor yasakları silindi."
+	}
+
+	"All Delete 2"
+	{
+		"en"			"All data has been deleted."
+		"tr"			"Tüm veriler silindi."
+	}
+
+	"Report Menu Successful"
+	{
+		"en"			"{green} Operation command successful.{orchid}"
+		"tr"			"{green} İşlem komutu başarılı.{orchid}"
+	}
+
+	"Report Menu Footer"
+	{
+		"#format" 		"{1:s}{2:s}{3:s}"
+		"en"			"{1} [{2}] • {3}"
+		"tr"			"{1} [{2}] • {3}"	
+	}
+
+	"Client Report Count 2"
+	{
+		"#format" 		"{1:d}"
+		"en"			"{lightblue}You have {orchid}{1} {lightblue}reports awaiting response. Please answer."
+		"tr"			"{lightblue}Yanıt bekleyen {orchid}{1} {lightblue}adet raporunuz bulunmaktadır. Lütfen cevap veriniz."
+	}
+
+	"Client Report Count 1"
+	{
+		"#format" 		"{1:d}"
+		"en"			"{lightblue}You have {orchid}{1} {lightblue}reports open. Admins will deal with your report as soon as possible."
+		"tr"			"{lightblue}Açık durumda {orchid}{1} {lightblue}adet raporunuz bulunmaktadır. En kısa sürede raporunuz ile yetkililer ilgilenecektir."
+	}
+
+	"Admin Report Count"
+	{
+		"#format" 		"{1:d}"
+		"en"			"{lime}There are {orchid}{1} {lime}numbers of reports pending response from the admins."
+		"tr"			"{lime}Açık durumda yetkililerden yanıt bekleyen {orchid}{1} {lime}adet rapor bulunmaktadır."
+	}
+}
