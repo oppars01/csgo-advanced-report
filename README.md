@@ -94,7 +94,7 @@ Question the report.
 
 Rapor sorgular.
 
--  sm_reportbans || sm_raporbanlari
+-  sm_reportbanquery || sm_raporbanlari
 
 **[EN]**
 
