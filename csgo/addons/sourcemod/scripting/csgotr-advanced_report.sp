@@ -196,7 +196,7 @@ public Action CreateReport(int client,int args)
             char s_steam_id[32], s_temp[512];
             if(!GetClientAuthId(client, AuthId_Steam2, s_steam_id, sizeof(s_steam_id)))Format(s_steam_id, sizeof(s_steam_id), "%t", "Unknown Steam ID"); 
             DiscordSQL_EscapeString(s_steam_id, sizeof(s_steam_id));
-            Format(s_temp, sizeof(s_temp), "SELECT * FROM `bans` WHERE `steam_id` >= '%s'", s_steam_id);
+            Format(s_temp, sizeof(s_temp), "SELECT * FROM `bans` WHERE `steam_id` = '%s'", s_steam_id);
             if(!IsThereRecord(s_temp)){
                 Format(s_temp, sizeof(s_temp), "SELECT `creation_time` FROM `reports` WHERE `steam_id` = '%s' and `creation_time` >= %d ORDER BY `id` DESC LIMIT 1", s_steam_id, GetTime() - i_wait_time);
                 int i_time = SQLFirstDataInt(s_temp);
@@ -371,20 +371,23 @@ public Action ReportBanQuery(int client,int args)
 public Action ReportMenu(int client,int args)
 {
     if(client!=0){
-        if(IsValidClient(client)){
-            char s_temp[256];
-            Menu menu = new Menu(Report_MenuCallback);
-            menu.SetTitle("%t", "Advanced Report");
-            Format(s_temp, sizeof(s_temp), "%t", "All Delete Report");
-            menu.AddItem("All Delete Report 2", s_temp);
-            Format(s_temp, sizeof(s_temp), "%t", "All Delete Bans");
-            menu.AddItem("All Delete Bans 2", s_temp);
-            Format(s_temp, sizeof(s_temp), "%t", "All Delete");
-            menu.AddItem("All Delete 2", s_temp);
-            menu.Display(client, MENU_TIME_FOREVER);
-        }
+        if(IsValidClient(client))Report_Menu().Display(client, MENU_TIME_FOREVER);
     }else PrintToServer("%s %t", s_tag, "Console Message");
     return Plugin_Handled;
+}
+
+Menu Report_Menu()
+{
+    char s_temp[256];
+    Menu menu = new Menu(Report_MenuCallback);
+    menu.SetTitle("%t", "Advanced Report");
+    Format(s_temp, sizeof(s_temp), "%t", "All Delete Report");
+    menu.AddItem("All Delete Report 2", s_temp);
+    Format(s_temp, sizeof(s_temp), "%t", "All Delete Bans");
+    menu.AddItem("All Delete Bans 2", s_temp);
+    Format(s_temp, sizeof(s_temp), "%t", "All Delete");
+    menu.AddItem("All Delete 2", s_temp);
+    return menu;
 }
 
 int Report_MenuCallback(Menu menu, MenuAction action, int client, int param2)
@@ -408,7 +411,7 @@ int Report_MenuCallback(Menu menu, MenuAction action, int client, int param2)
             Format(s_temp, sizeof(s_temp), "DELETE FROM `bans`;");
             SQLQueryNoData(s_temp);
         }
-        menu.Display(client, MENU_TIME_FOREVER);
+        Report_Menu().Display(client, MENU_TIME_FOREVER);
         CPrintToChat(client, "%s%s %t %t", s_tag_color, s_tag, "Report Menu Successful", s_option);
         if(!StrEqual(s_webhook, "") ){
             char s_steam_id[32], s_username[32];
@@ -433,10 +436,8 @@ int Report_MenuCallback(Menu menu, MenuAction action, int client, int param2)
             hook.Send();
             delete hook;
         }
-    }
-    else if (action == MenuAction_End) delete menu;
+    }else if (action == MenuAction_End) delete menu;
 }
-
 
 Menu Reports_Menu(char condition[64])
 {
@@ -452,21 +453,21 @@ Menu Reports_Menu(char condition[64])
     menu.AddItem(s_temp, s_temp_2);
 
     if(StrEqual(condition, ""))Format(s_temp, sizeof(s_temp), "SELECT COUNT(*) FROM `reports` WHERE `status` = 1");
-    else Format(s_temp, sizeof(s_temp), "SELECT COUNT(*) FROM `reports` WHERE WHERE `status` = 1 and %s", condition);
+    else Format(s_temp, sizeof(s_temp), "SELECT COUNT(*) FROM `reports` WHERE `status` = 1 and %s", condition);
     Format(s_temp_2, sizeof(s_temp_2), "%t", "Open Reports", SQLFirstDataInt(s_temp));
     if(StrEqual(condition, ""))Format(s_temp, sizeof(s_temp), "SELECT `id`,`status`,`creation_time` FROM `reports` WHERE `status` = 1 ORDER BY `id` DESC LIMIT 999");
     else Format(s_temp, sizeof(s_temp), "SELECT `id`,`status`,`creation_time` FROM `reports` WHERE `status` = 1 and %s ORDER BY `id` DESC LIMIT 999", condition);
     menu.AddItem(s_temp, s_temp_2);
 
     if(StrEqual(condition, ""))Format(s_temp, sizeof(s_temp), "SELECT COUNT(*) FROM `reports` WHERE `status` = 2");
-    else Format(s_temp, sizeof(s_temp), "SELECT COUNT(*) FROM `reports` WHERE WHERE `status` = 2 and %s", condition);
+    else Format(s_temp, sizeof(s_temp), "SELECT COUNT(*) FROM `reports` WHERE `status` = 2 and %s", condition);
     Format(s_temp_2, sizeof(s_temp_2), "%t", "Awaiting Response Reports", SQLFirstDataInt(s_temp));
     if(StrEqual(condition, ""))Format(s_temp, sizeof(s_temp), "SELECT `id`,`status`,`creation_time` FROM `reports` WHERE `status` = 2 ORDER BY `id` DESC LIMIT 999");
     else Format(s_temp, sizeof(s_temp), "SELECT `id`,`status`,`creation_time` FROM `reports` WHERE `status` = 2 and %s ORDER BY `id` DESC LIMIT 999", condition);
     menu.AddItem(s_temp, s_temp_2);
 
     if(StrEqual(condition, ""))Format(s_temp, sizeof(s_temp), "SELECT COUNT(*) FROM `reports` WHERE `status` = 0");
-    else Format(s_temp, sizeof(s_temp), "SELECT COUNT(*) FROM `reports` WHERE WHERE `status` = 0 and %s", condition);
+    else Format(s_temp, sizeof(s_temp), "SELECT COUNT(*) FROM `reports` WHERE `status` = 0 and %s", condition);
     Format(s_temp_2, sizeof(s_temp_2), "%t", "Closed Reports", SQLFirstDataInt(s_temp));
     if(StrEqual(condition, ""))Format(s_temp, sizeof(s_temp), "SELECT `id`,`status`,`creation_time` FROM `reports` WHERE `status` = 0 ORDER BY `id` DESC LIMIT 999");
     else Format(s_temp, sizeof(s_temp), "SELECT `id`,`status`,`creation_time` FROM `reports` WHERE `status` = 0 and %s ORDER BY `id` DESC LIMIT 999", condition);
@@ -1132,8 +1133,8 @@ void SendMessage(int client, char message[255])
                             SetHudTextParams(-1.0, 0.1, 5.0, GetRandomInt(0, 255), GetRandomInt(0, 255), GetRandomInt(0, 255), 0, 2, 1.0, 0.1, 0.2);
                             ShowHudText(i, 1, "%t", "Send Message Player Hud", i_client_temp[client]);
                             CPrintToChat(i, "%s%s %t", s_tag_color, s_tag, "Send Message Player Say Text", i_client_temp[client]);
-                        }else if(CheckAdminFlag(i, s_flags) && i_report_status==1){
-                            if(!StrEqual(s_temp, s_report_steam_id)){
+                        }else if(CheckAdminFlag(i, s_flags)){
+                            if(!StrEqual(s_temp, s_report_steam_id) && i_report_status==1){
                                 SetHudTextParams(-1.0, 0.1, 5.0, GetRandomInt(0, 255), GetRandomInt(0, 255), GetRandomInt(0, 255), 0, 2, 1.0, 0.1, 0.2);
                                 ShowHudText(i, 1, "%t", "Send Message Admin Hud", i_client_temp[client]);
                                 CPrintToChat(i, "%s%s %t", s_tag_color, s_tag, "Send Message Admin Say Text", i_client_temp[client]);
@@ -1505,13 +1506,13 @@ bool ClientControl(int client){
 
 Action GetReportCount(Handle hTimer)
 {
-    char s_temp[256];
+    char s_temp[256], s_steam_id[32];
     for (int i = 1; i <= MaxClients; i++)if (IsValidClient(i)){
-        if(GetClientAuthId(i, AuthId_Steam2, s_temp, sizeof(s_temp)))
-        Format(s_temp, sizeof(s_temp), "SELECT COUNT(*) FROM `reports` WHERE `steam_id`='%s' and `status` = %d", s_temp, 2);
+        if(GetClientAuthId(i, AuthId_Steam2, s_steam_id, sizeof(s_steam_id)))
+        Format(s_temp, sizeof(s_temp), "SELECT COUNT(*) FROM `reports` WHERE `steam_id`='%s' and `status` = %d", s_steam_id, 2);
         int i_count = SQLFirstDataInt(s_temp);
         if(i_count>0) CPrintToChat(i, "%s%s %t", s_tag_color, s_tag, "Client Report Count 2", i_count);
-        Format(s_temp, sizeof(s_temp), "SELECT COUNT(*) FROM `reports` WHERE `steam_id`='%s' and `status` = %d", s_temp, 1);
+        Format(s_temp, sizeof(s_temp), "SELECT COUNT(*) FROM `reports` WHERE `steam_id`='%s' and `status` = %d", s_steam_id, 1);
         i_count = SQLFirstDataInt(s_temp);
         if(i_count>0) CPrintToChat(i, "%s%s %t", s_tag_color, s_tag, "Client Report Count 1", i_count);
         if(CheckAdminFlag(i, s_flags)){
