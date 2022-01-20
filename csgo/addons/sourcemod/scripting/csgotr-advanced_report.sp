@@ -200,7 +200,7 @@ public Action CreateReport(int client,int args)
             if(!IsThereRecord(s_temp)){
                 Format(s_temp, sizeof(s_temp), "SELECT `creation_time` FROM `reports` WHERE `steam_id` = '%s' and `creation_time` >= %d ORDER BY `id` DESC LIMIT 1", s_steam_id, GetTime() - i_wait_time);
                 int i_time = SQLFirstDataInt(s_temp);
-                if(i_wait_time==-1 || i_time == 0 ) Rules_Menu().Display(client, MENU_TIME_FOREVER);
+                if(i_wait_time < 1 || i_time == 0 ) Rules_Menu().Display(client, MENU_TIME_FOREVER);
                 else{
                     i_time += i_wait_time;
                     FormatTime(s_temp, sizeof(s_temp), "%d.%m.20%y ✪ %X", i_time);
@@ -1043,7 +1043,7 @@ int Players_MenuCallback(Menu menu, MenuAction action, int client, int param2)
             DiscordSQL_EscapeString(s_steam_id, sizeof(s_steam_id));
             Format(s_temp, sizeof(s_temp), "SELECT `creation_time` FROM `reports` WHERE `steam_id` = '%s' and `steam_id_reported` = '%s' and `creation_time` >= %d and `status`!=%d ORDER BY `id` DESC LIMIT 1", s_steam_id, s_steam_id_target, GetTime() - i_same_player_wait_time, 0);
             int i_time = SQLFirstDataInt(s_temp);
-            if(i_same_player_wait_time==-1 || i_time == 0 ){
+            if(i_same_player_wait_time<1 || i_time == 0 ){
                 CPrintToChat(client, "%s%s %t", s_tag_color, s_tag, "Report Player Select", i_client_temp[ client ]);
                 Reason_Menu().Display(client, 60);
             }else{
