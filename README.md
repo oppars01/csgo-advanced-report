@@ -20,8 +20,16 @@ Oyuncuların sunucu içerisinde rahatsız oldukları veya hile olduğundan şüp
 
 "Counter-Strike: Global Offensive" topluluk sunucusunda bir oyuncunun farklı bir oyuncuyu rapor etmesini olacak sağlamaktadır. Rapor eden kişi CFG üzerinden belirlenen süre boyunca yeni rapor oluşturamaz veya aynı kişiyi raporlayamaz. Rapor edilen kişiye yetkililer yanıt verebilir ve yanıt bekleyebilir. Rapor kapatılana kadar yetkililer veya rapor eden kişi mesaj gönderebilir. Eğer çok gereksiz rapor kullanımı olursa bu kişinin rapor sistemini kullanması yasaklanabilir. Yetkililer oyuncuların diğer raporlarını da görüntüleyip analiz yapabilme olanağına sahiptir.
 
-# Reasons File (Nedenler Dosyası) 
-csgo/addons/sourcemod/configs/csgotr-advanced_report_reasons.txt
+# Setup (Kurulum)
+> database.cfg:
+```
+"csgotr_advanced_report"
+{
+  "driver"             "sqlite"
+  "database"           "csgotr_advanced_report"
+}
+```
+> Reasons File (Nedenler Dosyası): csgo/addons/sourcemod/configs/csgotr-advanced_report_reasons.txt
 
 # Commands (Komutlar)
 
