@@ -4,7 +4,7 @@
 It ensures that players who are disturbed by the server or suspected of cheating are reported to the authorities. The reports are recorded both on the Discord server and on the database. The authorized person dealing with the report can send a message to request a response from the user in this report. Reports that are not updated for a certain period of time are automatically closed. In addition, spam can be prevented by banning from the report.
 
 **[TR]**
-Oyuncuların sunucu içerisinde rahatsız oldukları veya hile olduğundan şüphelendikleri kişileri yetkililere rapor edilmesini sağlamaktadır. Edilen raporlar hem Discord sunucusuna hem de veritabanı üzerinde kayıt edilmektedir. Rapor ile ilgilenen yetkili bu raporda kullanıcıdan deyay istemek amacıyla mesaj gönderip yanıt bekleyebilmektedir. Belirli süre güncellenmeyen raporlar otomatik olarak kapatılmaktadır. Ayrıca rapordan yasaklama sayesinde spam engellenebilir.
+Oyuncuların sunucu içerisinde rahatsız oldukları veya hile olduğundan şüphelendikleri kişileri yetkililere rapor edilmesini sağlamaktadır. Edilen raporlar hem Discord sunucusuna hem de veri tabanı üzerinde kayıt edilmektedir. Rapor ile ilgilenen yetkili bu raporda kullanıcıdan detay istemek amacıyla mesaj gönderip yanıt bekleyebilmektedir. Belirli süre güncellenmeyen raporlar otomatik olarak kapatılmaktadır. Ayrıca rapordan yasaklama sayesinde spam engellenebilir.
 
 # Dependencies (Bağımlılık)
 
