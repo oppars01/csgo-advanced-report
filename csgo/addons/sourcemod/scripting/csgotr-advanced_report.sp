@@ -37,6 +37,7 @@ public void OnPluginStart()
     RegAdminCmd("sm_reportmenu", ReportMenu, ADMFLAG_ROOT, "Opens the report menu.");
 
     RegConsoleCmd("sm_raporolustur", CreateReport, "Rapor oluşturmanızı sağlar.");
+    RegConsoleCmd("sm_rapor", CreateReport, "Rapor oluşturmanızı sağlar.");
     RegConsoleCmd("sm_raporban", ReportBan, "Oyuncunun rapor oluşturmasını yasaklar.");
     RegConsoleCmd("sm_raporbansteamid", ReportBanSteamID, "Belirtilen STEAM ID bilgisine rapor oluşturma yasağı uygular.");
     RegConsoleCmd("sm_raporunban", ReportUnBan, "Rapor oluşturma yasağını kaldırır.");
@@ -350,7 +351,7 @@ public Action ReportBanQuery(int client,int args)
                         char s_error[255];
                         SQL_GetError(h_database, s_error, sizeof(s_error));
                         DatabaseQueryError(s_error, s_temp);
-                    }else if (SQL_GetRowCount(DBRS_Query) || SQL_FetchRow(DBRS_Query)) SQL_FetchString(DBRS_Query, 0, s_steam_id, sizeof(s_steam_id));
+                    }else if (SQL_FetchRow(DBRS_Query)) SQL_FetchString(DBRS_Query, 0, s_steam_id, sizeof(s_steam_id));
                     delete DBRS_Query;
                 }else{
                     int i_target = FindTarget(client, s_steam_id, true, true);
@@ -584,7 +585,7 @@ void ReportBanDetail(int client, char steam_id[32]){
         DatabaseQueryError(s_error, s_temp);
         if(client == 0) PrintToServer("%s %t", s_tag, "Detail Ban Error Console");
         else CPrintToChat(client, "%s%s %t", s_tag_color, s_tag, "Detail Ban Error");
-    }else if (SQL_GetRowCount(DBRS_Query) || SQL_FetchRow(DBRS_Query)){
+    }else if (SQL_FetchRow(DBRS_Query)){
         char s_username[32], s_steam_id_admin[32], s_username_admin[32], s_reason[255], s_time[32];
         SQL_FetchString(DBRS_Query, 2, s_username,sizeof(s_username));
         SQL_FetchString(DBRS_Query, 3, s_steam_id_admin,sizeof(s_steam_id_admin));
@@ -644,7 +645,7 @@ Menu ReportDetail_Menu(int client, int id)
         SQL_GetError(h_database, s_error, sizeof(s_error));
         DatabaseQueryError(s_error, s_temp);
         CPrintToChat(client, "%s%s %t", s_tag_color, s_tag, "Report Detail Error");
-    }else if (SQL_GetRowCount(DBRS_Query) || SQL_FetchRow(DBRS_Query)){
+    }else if (SQL_FetchRow(DBRS_Query)){
         b_data = true;
         char s_steam_id[32], s_client_steam_id[32];
         if(!GetClientAuthId(client, AuthId_Steam2, s_client_steam_id, sizeof(s_client_steam_id)))Format(s_client_steam_id, sizeof(s_client_steam_id), "%t", "Unknown Steam ID");
@@ -677,7 +678,7 @@ Menu ReportDetail_Menu(int client, int id)
                 char s_error[255];
                 SQL_GetError(h_database, s_error, sizeof(s_error));
                 DatabaseQueryError(s_error, s_temp);
-            }else if (SQL_GetRowCount(DBRS_Query) || SQL_FetchRow(DBRS_Query)){
+            }else if (SQL_FetchRow(DBRS_Query)){
                 b_data_2 = true;
                 SQL_FetchString(DBRS_Query, 0, s_temp,sizeof(s_temp));
             }
@@ -742,7 +743,7 @@ int ReportDetail_MenuCallback(Menu menu, MenuAction action, int client, int para
             SQL_GetError(h_database, s_error, sizeof(s_error));
             DatabaseQueryError(s_error, s_temp);
             CPrintToChat(client, "%s%s %t", s_tag_color, s_tag, "Report Detail UnBan Error");
-            }else if (SQL_GetRowCount(DBRS_Query) || SQL_FetchRow(DBRS_Query)){
+            }else if (SQL_FetchRow(DBRS_Query)){
                 SQL_FetchString(DBRS_Query, 0, s_temp, sizeof(s_temp));
                 UnBan(client, s_temp);
             }
@@ -802,7 +803,7 @@ Menu ReportStatusChange_Menu(int client)
         SQL_GetError(h_database, s_error, sizeof(s_error));
         DatabaseQueryError(s_error, s_temp);
         CPrintToChat(client, "%s%s %t", s_tag_color, s_tag, "Report Status Change Record Error");
-    }else if (SQL_GetRowCount(DBRS_Query) || SQL_FetchRow(DBRS_Query)){
+    }else if (SQL_FetchRow(DBRS_Query)){
         b_data = true;
         int i_report_status = SQL_FetchInt(DBRS_Query, 0);
         Format(s_temp, sizeof(s_temp), "%t", "Status 1");
@@ -1105,7 +1106,7 @@ void SendMessage(int client, char message[255])
         SQL_GetError(h_database, s_error, sizeof(s_error));
         DatabaseQueryError(s_error, s_temp);
         CPrintToChat(client, "%s%s %t", s_tag_color, s_tag, "Send Message Error");
-    }else if (SQL_GetRowCount(DBRS_Query) || SQL_FetchRow(DBRS_Query)){
+    }else if (SQL_FetchRow(DBRS_Query)){
         if(SQL_FetchInt(DBRS_Query,1) != 0){
             char s_steam_id[32], s_username[32], s_report_steam_id[32];
             if(!GetClientAuthId(client, AuthId_Steam2, s_steam_id, sizeof(s_steam_id)))Format(s_steam_id, sizeof(s_steam_id), "%t", "Unknown Steam ID"); 
@@ -1284,7 +1285,7 @@ int DetailAddBan(int client, char reason[255]){
         SQL_GetError(h_database, s_error, sizeof(s_error));
         DatabaseQueryError(s_error, s_temp);
         CPrintToChat(client, "%s%s %t", s_tag_color, s_tag, "Report Detail Ban Error");
-    }else if (SQL_GetRowCount(DBRS_Query) || SQL_FetchRow(DBRS_Query)){
+    }else if (SQL_FetchRow(DBRS_Query)){
         char s_steam_id[32], s_username[32];
         SQL_FetchString(DBRS_Query, 0, s_steam_id, sizeof(s_steam_id));
         SQL_FetchString(DBRS_Query, 1, s_username, sizeof(s_username));
@@ -1532,7 +1533,7 @@ bool IsThereRecord(char[] query)
         char s_error[255];
         SQL_GetError(h_database, s_error, sizeof(s_error));
         DatabaseQueryError(s_error, query);
-    }else if (SQL_GetRowCount(DBRS_Query) || SQL_FetchRow(DBRS_Query)) b_status = true;
+    }else if (SQL_FetchRow(DBRS_Query)) b_status = true;
     delete DBRS_Query;
     return b_status;
 }
@@ -1570,7 +1571,7 @@ int SQLFirstDataInt(char[] query)
         char s_error[255];
         SQL_GetError(h_database, s_error, sizeof(s_error));
         DatabaseQueryError(s_error, query);
-    }else if (SQL_GetRowCount(DBRS_Query) || SQL_FetchRow(DBRS_Query)) i_time = SQL_FetchInt(DBRS_Query, 0);
+    }else if (SQL_FetchRow(DBRS_Query)) i_time = SQL_FetchInt(DBRS_Query, 0);
     delete DBRS_Query;
     return i_time;
 }
